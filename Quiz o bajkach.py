@@ -59,9 +59,9 @@ def zapisz_wyniki(wyniki):
     try:
         with open("quiz.json", "w") as f:
             json.dump(wyniki, f)
-        print("✅ Wyniki zapisane!")
+        print("😄Wyniki zapisane!😃")
     except:
-        print("❌ Błąd zapisu pliku.")
+        print("😐Błąd zapisu pliku.😬")
 
 def wczytaj_wyniki():
     try:
@@ -86,10 +86,10 @@ def uruchom_quiz(nazwa_bajki):
             print(f"{litera}) {odp_dict[litera]}")
         wybór = input("Wybierz A/B/C/D: ").upper()
         if wybór in odp_dict and odp_dict[wybór] == p["poprawna"]:
-            print("✅ Dobrze!")
+            print("🤪Dobrze!")
             wynik += 1
         else:
-            print("❌ Źle! Poprawna to:", p["poprawna"])
+            print("😧Źle! Poprawna to:", p["poprawna"])
     print(f"\nTwój wynik: {wynik}/5")
     return wynik
 
@@ -119,6 +119,6 @@ while True:
         break
     elif wybór == "5":
         wyniki = {}
-        print("🧹 Wyniki usunięte.")
+        print("🧹 Wyniki usunięte.🧹")
     else:
-        print("❗ Nieprawidłowy wybór.")
+        print("🙄Nieprawidłowy wybór.😕")
